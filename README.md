@@ -1,1 +1,1 @@
-# HTV_Whiskey_GAN
+# HTV_Wine
