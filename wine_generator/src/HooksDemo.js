@@ -1,30 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Button } from 'react';
 import './App.css';
 
 export default function HookDemo() {
 
-  const [price, setPrice] = useInput('')
   const [category, setCategory] = useInput('');
 
   return (
     <form className="App-header">
-      <h1>Enter Price Range and Category</h1>
-      <label>
-        Price
-        <input
+      <h1>What Kind of Wine?</h1>
+      <label className="field">
+        <textarea
+          className="field"
           type="text"
-          onChange={setPrice}
-          value={price}
-          />
-      </label>
-      <label>
-        Category
-        <input
-          type ="text"
           onChange={setCategory}
           value={category}
-        />
+          />
       </label>
+      <button type='submit' className="submitButton"> 
+        Find Wine </button>
     </form>
   );
 }

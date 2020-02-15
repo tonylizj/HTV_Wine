@@ -4,7 +4,7 @@ import './App.css';
 
 export default function App() {
   return (
-    <div classNmae="App">
+    <div className="App">
       <header className="App-header">
         <ErrorBoundary fallback = {(error) => (
           <span>
