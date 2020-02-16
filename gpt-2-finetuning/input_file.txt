@@ -1,0 +1,4 @@
+<|startoftext|>
+country: Argentina
+variety: Red Blend
+price: 28.0

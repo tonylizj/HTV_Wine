@@ -1,0 +1,90 @@
+description: This blend is dominated by Cabernet Franc, Malbec, Cabernet Sauvignon, and Petit Malbec. It's a simple, simple, complex wine that has an extremely easy flavor profile, with a soft tannins, a crisp and vibrant wood character, and a delicious edge of tangerine.
+designation: Sejou
+province: Mendoza Province
+region_1: Mendoza
+title: Sousa 2008 Sejou Red (Mendoza)
+winery: Sousa
+points: 88
+<|endoftext|>
+<|startoftext|>
+country: Italy
+variety: Riesling
+price: 30.0
+description: This wines comes from the same vineyard that produced the Riesling. It's fresh from a single winemaker. It has a lively aroma of red cherries, white peach, raspberry, clove, cherry, plum, and apple. It's ripe with an acidity and tangy mouthfeel that gives it an extremely powerful edge.
+designation: Alcoa
+province: Sicily & Sardinia
+region_1: Castello
+title: Sicilia 2011 Alcoa Riesling (Castello)
+winery: Sicilia
+points: 88
+<|endoftext|>
+<|startoftext|>
+country: US
+variety: Merlot
+price: 22.0
+description: Dry and herbal, this Merlot is a ripe and slightly floral Merlot. The palate has citrusy notes of lime, lime zest, and peach notes. There's a light to the woodiness when the finish is full.
+designation: N/A
+province: California
+region_1: Paso Robles
+title: Trenlin 2006 Merlot (Paso Robles)
+winery: Trenlin
+points: 88
+<|endoftext|>
+<|startoftext|>
+country: Italy
+variety: Riesling
+price: 19.0
+description: Aromas of black cherry and black olives lead the way. It's fruity and fruity. It's dark and tannic.
+designation: Gato
+province: Sicily & Sardinia
+region_1: Castello
+title: St. Lucia Vineyard 2010 Gato Merlot (Castello)
+winery: St. Lucia Vineyard
+points: 88
+<|endoftext|>
+<|startoftext|>
+country: France
+variety: Riesling
+price: 34.0
+description: This is a very mature wine, and its fruit and aromas are a blend of cherries, raspberry, cassis, black cherry and a hint of espresso to finish. Drink from 2017.
+designation: N/A
+province: Alsace
+region_1: Les Miserables
+title: St. Troe 2008 Riesling (Les Miserables)
+winery: St. Troe
+points: 88
+<|endoftext|>
+<|startoftext|>
+country: Spain
+variety: Tempranillo
+price: 13.0
+description: Very concentrated, with its creamy orange peel in the background, with lemon, lime and clove. Aromas of plum and licorice linger on the palate.
+designation: Sycamore
+province: Catalonia
+region_1: Alta Familia
+title: Seville 2013 Sycamore  (Alta Familia)
+winery: Seville
+points: 88
+<|endoftext|>
+<|startoftext|>
+country: US
+variety: Zinfiel
+price: 40.0
+description: A bright, ripe, light-footed zinfiel offers juicy peach and plum flavors that will dry up even more in the glass. There's depth in the fruit and acidity on the finish.
+designation: Kugelkotter
+province: Germany
+region_1: Sollinburg
+title: Röllrich 2007 Kugelkotter Zinfiel (Sollinburg)
+winery: Röllrich
+points: 88
+<|endoftext|>
+<|startoftext|>
+country: Argentina
+variety: Rioja
+price: 29.0
+description: It's the best, richest and least named Rioja, produced alongside a blend of Cabernet Franc, Petit Malbec, Cab Cabernet Sauvignon, and Syrah. The body is soft and creamy, with fresh black cherries.
+designation: N/A
+province: Mendoza Province
+region_1: Mendoza
+title: Mendoza
+title: Alkendula

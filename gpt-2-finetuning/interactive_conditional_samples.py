@@ -8,14 +8,17 @@ import tensorflow as tf
 
 import model, sample, encoder
 
+input_file = open('input_file.txt', 'r')
+output_file = open('output_file.txt', 'w')
+
 def interact_model(
-    model_name='117M',
+    model_name='wine_model',
     seed=None,
     nsamples=1,
     batch_size=1,
-    length=None,
+    length=1023,
     temperature=1,
-    top_k=0,
+    top_k=40,
     top_p=0.0
 ):
     """
@@ -67,23 +70,18 @@ def interact_model(
         ckpt = tf.train.latest_checkpoint(os.path.join('models', model_name))
         saver.restore(sess, ckpt)
 
-        while True:
-            raw_text = input("Model prompt >>> ")
-            while not raw_text:
-                print('Prompt should not be empty!')
-                raw_text = input("Model prompt >>> ")
-            context_tokens = enc.encode(raw_text)
-            generated = 0
-            for _ in range(nsamples // batch_size):
-                out = sess.run(output, feed_dict={
-                    context: [context_tokens for _ in range(batch_size)]
-                })[:, len(context_tokens):]
-                for i in range(batch_size):
-                    generated += 1
-                    text = enc.decode(out[i])
-                    print("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40)
-                    print(text)
-            print("=" * 80)
+        raw_text = input_file.read()
+        context_tokens = enc.encode(raw_text)
+        generated = 0
+        for _ in range(nsamples // batch_size):
+            out = sess.run(output, feed_dict={
+                context: [context_tokens for _ in range(batch_size)]
+            })[:, len(context_tokens):]
+            for i in range(batch_size):
+                generated += 1
+                text = enc.decode(out[i])
+                output_file.write(text)
+
 
 if __name__ == '__main__':
     fire.Fire(interact_model)
