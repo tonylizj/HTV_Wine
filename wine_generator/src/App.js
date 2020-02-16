@@ -1,43 +1,52 @@
-import React from 'react';
-import HookDemo from './HooksDemo';
+import React, { Component, useState, useReducer } from 'react';
+import { useRoutes } from 'hookrouter';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import InputPage from './InputPage';
+import ResultsPage from './ResultsPage';
 import './App.css';
 
-export default function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <ErrorBoundary fallback = {(error) => (
-          <span>
-            OOOPS
-          </span>
-        )}>
-          <HookDemo />
-        </ErrorBoundary>
-      </header>
-    </div>
-  );
+const initialState = {
+  country: '',
+  variety: '',
+  price: '',
+  description: '',
+};
+
+export const AppContext = React.createContext(initialState);
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'update':
+            return {
+                country: action.country,
+                variety: action.variety,
+                price: action.price,
+            };
+        default:
+            return initialState;
+    }
 }
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+const routes = {
+  "/": () => <InputPage />,
+  "/Results": () => <ResultsPage />
+}
 
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
-    return { error: error };
-  }
+export default function App() {
 
-  render() {
-    if (this.state.hasError) {
-      // You can render any custom fallback UI
-      const Fallback = this.props.fallback;
-      return (
-        <Fallback error={this.state.error}/>
-      )
-    }
+  const routeResult = useRoutes(routes);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-    return this.props.children;
-  }
+  return (
+    <div className="App">
+      <AppContext.Provider value={{state, dispatch}}>
+        {routeResult}
+      </AppContext.Provider>
+    </div>
+  );
 }
